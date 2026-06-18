@@ -7,27 +7,27 @@
 
 /* ── Design Tokens ───────────────────────── */
 :root {
-  --navy:       #0b1120;
-  --navy-mid:   #111827;
-  --navy-card:  #1a2235;
-  --navy-hover: #1e2a42;
-  --border:     rgba(255,255,255,0.07);
-  --border-lit: rgba(255,255,255,0.12);
+  --navy:       #ffffff;
+  --navy-mid:   #f8f9fb;
+  --navy-card:  #ffffff;
+  --navy-hover: #f1f4f8;
+  --border:     rgba(0,0,0,0.08);
+  --border-lit: rgba(0,0,0,0.15);
 
-  --cyan:       #22d3ee;
-  --cyan-dim:   rgba(34,211,238,0.12);
-  --cyan-glow:  0 0 18px rgba(34,211,238,0.3);
+  --cyan:       #0369a1;
+  --cyan-dim:   rgba(3,105,161,0.08);
+  --cyan-glow:  0 0 18px rgba(3,105,161,0.2);
 
-  --emerald:    #10b981;
-  --emerald-dim:rgba(16,185,129,0.15);
-  --rose:       #f43f5e;
-  --rose-dim:   rgba(244,63,94,0.15);
-  --amber:      #f59e0b;
-  --amber-dim:  rgba(245,158,11,0.15);
+  --emerald:    #059669;
+  --emerald-dim:rgba(5,150,105,0.1);
+  --rose:       #e11d48;
+  --rose-dim:   rgba(225,29,72,0.08);
+  --amber:      #d97706;
+  --amber-dim:  rgba(217,119,6,0.1);
 
-  --text-primary:   #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted:     #64748b;
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
@@ -36,8 +36,8 @@
   --radius:    10px;
   --radius-lg: 16px;
 
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.4), 0 1px 4px rgba(0,0,0,0.3);
-  --shadow-glow: 0 0 0 1px rgba(34,211,238,0.2), 0 4px 24px rgba(34,211,238,0.1);
+  --shadow-card: 0 1px 8px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+  --shadow-glow: 0 0 0 1px rgba(3,105,161,0.2), 0 4px 16px rgba(3,105,161,0.1);
 
   --sidebar-w: 240px;
   --transition: 0.18s ease;
@@ -50,7 +50,7 @@ html, body, #root {
 
 body {
   font-family: var(--font-sans);
-  background: var(--navy);
+  background: #f1f5f9;
   color: var(--text-primary);
   font-size: 14px;
   line-height: 1.6;
@@ -91,7 +91,7 @@ body {
   width: 32px;
   height: 32px;
   background: var(--cyan-dim);
-  border: 1px solid rgba(34,211,238,0.3);
+  border: 1px solid rgba(3,105,161,0.2);
   border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
@@ -151,7 +151,7 @@ body {
 }
 
 .sidebar-link:hover {
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.04);
   color: var(--text-primary);
 }
 
@@ -377,7 +377,7 @@ body {
   font-size: 11px;
   font-weight: 600;
   color: var(--text-muted);
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.04);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 2px 10px;
@@ -410,7 +410,7 @@ body {
 .bar-track {
   flex: 1;
   height: 6px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -444,7 +444,7 @@ body {
   gap: 12px;
   padding: 10px 12px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.03);
+  background: rgba(0,0,0,0.02);
   border: 1px solid var(--border);
 }
 
@@ -642,7 +642,7 @@ body {
 .form-select {
   width: 100%;
   padding: 9px 12px;
-  background: rgba(255,255,255,0.04);
+  background: #f8fafc;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
@@ -657,14 +657,14 @@ body {
 .form-input:hover,
 .form-select:hover {
   border-color: var(--border-lit);
-  background: rgba(255,255,255,0.06);
+  background: #ffffff;
 }
 
 .form-input:focus,
 .form-select:focus {
-  border-color: rgba(34,211,238,0.5);
-  background: rgba(34,211,238,0.04);
-  box-shadow: 0 0 0 3px rgba(34,211,238,0.1);
+  border-color: rgba(3,105,161,0.4);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(3,105,161,0.08);
 }
 
 .form-input::placeholder {
@@ -692,7 +692,7 @@ body {
 }
 
 .form-select option {
-  background: var(--navy-card);
+  background: #ffffff;
   color: var(--text-primary);
 }
 
@@ -700,10 +700,10 @@ body {
 .submit-btn {
   width: 100%;
   padding: 13px;
-  background: linear-gradient(135deg, rgba(34,211,238,0.15), rgba(34,211,238,0.08));
-  border: 1px solid rgba(34,211,238,0.3);
+  background: var(--cyan);
+  border: none;
   border-radius: var(--radius-sm);
-  color: var(--cyan);
+  color: #ffffff;
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 700;
@@ -717,9 +717,8 @@ body {
 }
 
 .submit-btn:hover {
-  background: linear-gradient(135deg, rgba(34,211,238,0.22), rgba(34,211,238,0.14));
-  border-color: rgba(34,211,238,0.5);
-  box-shadow: var(--cyan-glow);
+  background: #075985;
+  box-shadow: var(--shadow-glow);
 }
 
 .submit-btn:active {
@@ -735,7 +734,7 @@ body {
 .spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(34,211,238,0.3);
+  border: 2px solid rgba(3,105,161,0.2);
   border-top-color: var(--cyan);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
@@ -799,19 +798,19 @@ body {
 .result-decision-badge.APPROVE {
   background: var(--emerald-dim);
   color: var(--emerald);
-  border: 1px solid rgba(16,185,129,0.3);
+  border: 1px solid rgba(5,150,105,0.2);
 }
 
 .result-decision-badge.REVIEW {
   background: var(--amber-dim);
   color: var(--amber);
-  border: 1px solid rgba(245,158,11,0.3);
+  border: 1px solid rgba(217,119,6,0.2);
 }
 
 .result-decision-badge.DECLINE {
   background: var(--rose-dim);
   color: var(--rose);
-  border: 1px solid rgba(244,63,94,0.3);
+  border: 1px solid rgba(225,29,72,0.2);
 }
 
 .result-score-row {
@@ -851,7 +850,7 @@ body {
 
 .score-gauge-track {
   height: 6px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -887,7 +886,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 14px;
-  background: rgba(255,255,255,0.03);
+  background: #f8fafc;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
 }
@@ -936,7 +935,7 @@ body {
 
 .prob-track {
   height: 8px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -960,11 +959,12 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 22px;
-  transition: border-color var(--transition);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .health-card:hover {
   border-color: var(--border-lit);
+  box-shadow: var(--shadow-card);
 }
 
 .health-indicator {
@@ -981,9 +981,9 @@ body {
   flex-shrink: 0;
 }
 
-.health-dot.ok      { background: var(--emerald); box-shadow: 0 0 8px var(--emerald); }
-.health-dot.warn    { background: var(--amber);   box-shadow: 0 0 8px var(--amber); }
-.health-dot.error   { background: var(--rose);    box-shadow: 0 0 8px var(--rose); }
+.health-dot.ok      { background: var(--emerald); box-shadow: 0 0 6px rgba(5,150,105,0.4); }
+.health-dot.warn    { background: var(--amber);   box-shadow: 0 0 6px rgba(217,119,6,0.4); }
+.health-dot.error   { background: var(--rose);    box-shadow: 0 0 6px rgba(225,29,72,0.4); }
 .health-dot.loading {
   background: var(--text-muted);
   animation: pulse 1.2s infinite;
@@ -1092,7 +1092,7 @@ body {
   font-size: 11px;
   font-weight: 600;
   font-family: var(--font-mono);
-  background: rgba(255,255,255,0.05);
+  background: #f1f5f9;
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 2px 7px;
@@ -1132,7 +1132,7 @@ body {
 
 .perf-track {
   height: 5px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.06);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -1147,7 +1147,7 @@ body {
 /* ── Error toast ─────────────────────────── */
 .error-banner {
   background: var(--rose-dim);
-  border: 1px solid rgba(244,63,94,0.3);
+  border: 1px solid rgba(225,29,72,0.2);
   border-radius: var(--radius-sm);
   padding: 10px 14px;
   font-size: 13px;
