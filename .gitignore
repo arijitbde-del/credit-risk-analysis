@@ -15,3 +15,4 @@ data/processed/
 *.log
 .coverage
 htmlcov/
+node_modules/
